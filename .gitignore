@@ -1,0 +1,43 @@
+# --- Donnees ---
+# FER2013 fait 253 Mo : il se regenere avec scripts/prepare_fer2013.py
+data/
+
+# --- Sorties d'entrainement ---
+# Les checkpoints bruts pesent des dizaines de Mo (etat de l'optimiseur inclus).
+# Les resultats utiles sont copies dans results/, qui est versionne.
+outputs/
+
+# --- Modeles ---
+# Tous les .pt sont ignores, SAUF le modele deployable (0,6 Mo).
+*.pt
+!modele_leger.pt
+
+# Detecteur de visage YuNet : telecharge par scripts/download_face_model.py
+models/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# --- LaTeX ---
+*.aux
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.bak
+report/*.log
+
+# --- Systeme ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.idea/
+.vscode/
